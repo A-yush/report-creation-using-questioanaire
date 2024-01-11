@@ -1,4 +1,4 @@
-# Report Creation using surveys using Serverless Application on AWS Cloud 
+# Report Creation with surveys using Serverless Application on AWS Cloud 
 > Creating a report in .docx format having analysis based on chosen answers in a survey. A webpage is shown with a questionaire and a report gets generated after submission.
 
 ## Table of Contents
@@ -33,8 +33,8 @@ Many times different teams like solution architects, data architects,TAMs etc ta
 2. Amazon code commit repository stores the website code and all changes made in the repository automatically builds the AWS amplify app. index.html file contains the application code.
 3. The answers provided by clients are passed from AWS amplify via POST request to an API endpoint hosted on Amazon API gateway.
 4. The POST request with answers payload is passed to AWS Lambda handlers for further processing.
-5. AWS Lambda handler calls Amazon DynamoDB table to get the recommendations corresponding to chosen answer of a question and stores it in a variable. lambda-handler.py file contains the lambda code and Items folder contains the sample items of dymanoDB in JSON format. 
-6. After processing, AWS Lambda creates a document report (.docx format) and saves it in S3 bucket.
+5. AWS Lambda handler calls Amazon DynamoDB table to get the recommendations corresponding to chosen answer of a question and stores it in a variable. [lambda-handler.py](lambda-handler.py) file contains the lambda code and [Items](Items) folder contains the sample items of dynamoDB in JSON format. 
+6. After processing, AWS Lambda creates a document report (.docx format) and saves it in S3 bucket. See [sample document file](sample-report.docx) for reference.
 7. AWS Lambda also creates a S3 presigned URL of S3 object for downloading the file.
 8. AWS lambda handler passes the S3 presigned URL to API gateway.
 9. API gateway in turn passes the S3 presigned URL to AWS Amplify and the link is displayed on website. When client clicks on Download link, the document gets downloaded to Local device storage.
@@ -46,6 +46,7 @@ Note: Please make sure that the lambda function has required permissions to acce
 
 ## References
 [+]https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
+[+]https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html
 
 ## Contact
 Created by [@A-yush] - feel free to contact me!
