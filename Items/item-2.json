@@ -1,0 +1,14 @@
+{
+  "question": {
+    "S": "How do you ensure that you have the right data and code between all your environments"
+  },
+  "answer": {
+    "S": "Don't Know / Not Applicable"
+  },
+  "recommendation": {
+    "S": "Leverage CI/CD tools for code and infrastructure changes. Continuous Integration (CI) is a software development practice in which developers regularly integrate their code changes into a shared coderepository. This allows the team to detect and fix integration issues early in the development process. The code changes are automatically built, tested and validated before being integrated to the main project. Continuous Delivery (CD) is a software development practice that builds upon Continuous Integration by automating the process of delivering software updates to production. It ensures that the codebase is always in a releasable state, which can help organizations deploy new features and bug fixes more quickly and with less risk. The main goal of CI/CD is to create a fast feedback loop between developers and the codebase, which can help organizations to deliver new features and bug fixes more quickly and with less risk. It also helps to minimize the time between the development and the release of a new feature, by automating the testing, building and deployment of the code changes. AWS offers  CodeCommit,  CodeBuild,  CodeDeploy, and  CodePipeline  to integrate Continuous Integration (CI) and Continuous Deployment (CD) pipelines. While maintaining code and data in different environments, it is necessary to make sure lower environments do not have production data.To maintain data integrity Amazon Macie can help audit the data in lower environments to make sure they do not have PII elements. If such elements are found,  notifications can be sent out using Amazon SNS or the sensitive data can be redacted using a Glue job or Lambda function. \n Apart from Amazon Macie, AWS Glue also provides capabilities to detect and process sensitive data.For more details, refer to the following information:\n Deploy data lake ETL jobs using CDK Pipelines. \n Deploy an AWS Glue job with an AWS CodePipeline CI/CD pipeline . \n Overview of Amazon RDS Blue/Green Deployments. \n Complete CI/CD with AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline. \n Creating a notification workflow from sensitive data discover with \n Amazon Macie, Amazon EventBridge, AWS Lambda, and Slack"
+  },
+  "score": {
+    "S": "0.6"
+  }
+}

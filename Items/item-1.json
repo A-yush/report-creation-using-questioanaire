@@ -1,0 +1,14 @@
+{
+  "question": {
+    "S": "Who owns the enterprise data strategy in your organization"
+  },
+  "answer": {
+    "S": "Don't Know / Not Applicable"
+  },
+  "recommendation": {
+    "S": "Identify a clear owner for the enterprise data strategy.\nMany organizations have more than one data strategy, possibly for each\nline of business or corporate function. Some of these get refreshed over\ntime while other become outdated and obsolete. As a result, organizations\noften tend to acquire multiple technologies with overlapping functionality\nand require talent to support these technologies. Furthermore, some of\nthese technologies may not work well with other technologies, making it\ndifficult to share data and information across the organization. This can\nlead to confusion, inefficiencies, and wasted resources over time. Deluxe\nshould start with an enterprise view and establish a clear owner for the\nenterprise   data   strategy.   This   person   needs   to   have   the   overall\nresponsibility for driving data and analytics initiatives across the company,\nobtain the necessary support for these initiatives, and establish clear goals\nand objectives for the team."
+  },
+  "score": {
+    "S": "0.6"
+  }
+}

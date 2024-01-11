@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <form id ="myform">
+            <!-- question 1 fieldset-->
+            <fieldset>
+                <legend> Q1. <span id="question1">Who owns the enterprise data strategy in your organization</span>?</legend>
+                <input type="radio" name="Q1" id="Q1A1" value = "It is jointly owned by business and technology stakeholders">
+                <label for="Q1A1">
+                    It is jointly owned by business and technology stakeholders
+                </label><br>
+                <input type="radio" name="Q1" id="Q1A2" value ="It is owned by the business stakeholders">
+                <label for="Q1A2">
+                    It is owned by the business stakeholders
+                </label> <br>
+                <input type="radio" name="Q1" id="Q1A3" value = "It is owned by the technology team" >
+                <label for="Q1A3">
+                    It is owned by the technology team
+                </label><br>
+                <input type="radio" name="Q1" id="Q1A4" value="It is complicated. Varies by product, line of business, geography etc.">
+                <label for="Q1A4">
+                    It is complicated. Varies by product, line of business, geography etc.
+                </label><br>
+                <input type="radio" name="Q1" id="Q1A5" value = "No clear ownership for the enterprise data strategy today">
+                <label for="Q1A5">
+                    No clear ownership for the enterprise data strategy today
+                </label><br>
+                <input type="radio" name="Q1" id="Q1A6" value="Don't Know / Not Applicable">
+                <label for="Q1A6">
+                    Don't Know / Not Applicable
+                </label><br>
+                <br>
+            </fieldset> <br><br>
+
+            <!-- question 2 fieldset-->
+            <fieldset>
+                <legend> Q2. <span id="question2">How do you ensure that you have the right data and code between all your environments</span>?</legend>
+                <input type="radio" name="Q2" id="Q2A1" value = "Our team adheres to strict version control policies that govern how data and code are promoted from one environment to another">
+                <label for="Q2A1">
+                    Our team adheres to strict version control policies that govern how data and code are promoted from one environment to another.
+                </label><br>
+                <input type="radio" name="Q2" id="Q2A2" value ="We have strict version control policies for data and code promotion and they are followed most of the time">
+                <label for="Q2A2">
+                    We have strict version control policies for data and code promotion and they are followed most of the time
+                </label> <br>
+                <input type="radio" name="Q2" id="Q2A3" value = "We have strict version control policies for data and code promotion but sometimes we need to break our own rules" >
+                <label for="Q2A3">
+                    We have strict version control policies for data and code promotion but sometimes we need to break our own rules
+                </label><br>
+                <input type="radio" name="Q2" id="Q2A4" value="We have loosely defined policies around promoting code and data between our different environments">
+                <label for="Q2A4">
+                    We have loosely defined policies around promoting code and data between our different environments.
+                </label><br>
+                <input type="radio" name="Q2" id="Q2A5" value = "We do not have an efficient way to manage this today">
+                <label for="Q2A5">
+                    We do not have an efficient way to manage this today
+                </label><br>
+                <input type="radio" name="Q2" id="Q2A6" value="Don't Know / Not Applicable">
+                <label for="Q2A6">
+                    Don't Know / Not Applicable
+                </label><br>
+            </fieldset>
+        </form>
+        <button id="getdata">get Recommendations</button> <br><br>  
+        <a id="lbl"></label>
+    </body>
+
+    <script type="text/javascript">
+
+        // Click event for getdata button
+        $('#getdata').click(function(){ 
+
+            // fetching form data and storing in variables
+
+            var question_1 = $("#question1").text()
+            var question_2 = $("#question2").text()
+            var answer_1 = $("#myform input[name ='Q1']:checked").val();
+            var answer_2 = $("#myform input[name ='Q2']:checked").val();
+
+            // creating JSON object for sending to API gateway as payload
+            var formData = {
+                question1:question_1,
+                question2:question_2,
+                answer1:answer_1,
+                answer2:answer_2
+            };
+
+            $.ajax({ 
+                 // method
+                 type: "POST",
+                 // content-type
+                 contentType: "application/json",
+                 // converting JSON payload to string and passing it
+                 data: JSON.stringify(formData),
+                 // API gateway endpoint url
+                 // change the API gateway endpoint URL with your API gateway URL
+                 url: "API gateway endpoint URL",
+                 // on success
+                 success: function(data){        
+                    console.log("Success", data);
+                    // setting label value
+                    $('#lbl').attr("href",data["body"]);
+                    $('#lbl').html("Download the recommendations file from this link")
+                 },
+                 // on error
+                 error: function(data){        
+                    console.log("Error", data);
+                 }
+             });
+        });
+        
+    </script>
+
+</html>
