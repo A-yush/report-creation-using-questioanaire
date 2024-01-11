@@ -3,18 +3,20 @@
 
 ## Table of Contents
 
-*[Problem Statement](#problem-statement)
-*[AWS Solution Architecture](#aws-solution-architecture)
-*[AWS Services Used](#aws-services-used)
-*[Solution Steps](#solution-steps)
-*[Contact](#contact)
+* [Problem Statement](#problem-statement)
+* [AWS Solution Architecture](#aws-solution-architecture)
+* [AWS Services Used](#aws-services-used)
+* [Solution Steps](#solution-steps)
+* [Survey UI](#survey-ui)
+* [References](#references)
+* [Contact](#contact)
 
 
 ## Problem Statement
 Many times different teams like solution architects, data architects,TAMs etc takes surveys using multiple choice questions to get more insights in some related work of clients. Based on the answers provided by clients, a detailed report is created using this solution provided here which will help solution architects or managers proceed further with the client's use cases. The architecture is based on serverless application using AWS services.
 
 ## AWS Solution Architecture
-![aws-solution-architecture]()
+![solution-diagram](https://github.com/A-yush/report-creation-using-questioanaire/blob/master/images/solution-diagram.png)
 
 ## AWS Services Used
 
@@ -38,6 +40,12 @@ Many times different teams like solution architects, data architects,TAMs etc ta
 9. API gateway in turn passes the S3 presigned URL to AWS Amplify and the link is displayed on website. When client clicks on Download link, the document gets downloaded to Local device storage.
 
 Note: Please make sure that the lambda function has required permissions to access DynamoDB, S3 and API gateway. Also, S3 bucket policy should allow read and write operations from lambda.
+
+## Survey UI
+![survey-webpage](https://github.com/A-yush/report-creation-using-questioanaire/blob/master/images/survey-webpage.gif)
+
+## References
+[+]https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
 
 ## Contact
 Created by [@A-yush] - feel free to contact me!
