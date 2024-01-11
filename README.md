@@ -1,5 +1,5 @@
 # Report Creation with surveys using Serverless Application on AWS Cloud 
-> Creating a report in .docx format having analysis based on chosen answers in a survey. A webpage is shown with a questionaire and a report gets generated after submission.
+> Creating a report in .docx format having analysis based on chosen answers in a survey. A webpage is shown with a questionnaire and a report gets generated after submission.
 
 ## Table of Contents
 
