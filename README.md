@@ -45,8 +45,8 @@ Note: Please make sure that the lambda function has required permissions to acce
 ![survey-webpage](https://github.com/A-yush/report-creation-using-questioanaire/blob/master/images/survey-webpage.gif)
 
 ## References
-[+] https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
-[+] https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html
+* [+]https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
+* [+]https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html
 
 ## Contact
 Created by [@A-yush] - feel free to contact me!
