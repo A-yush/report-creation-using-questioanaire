@@ -30,7 +30,7 @@ Many times different teams like solution architects, data architects,TAMs etc ta
 ## Solution steps
 
 1. Clients interact with the survey website via internet hosted on AWS Amplify.
-2. Amazon code commit repository stores the website code and all changes made in the repository automatically builds the AWS amplify app. index.html file contains the application code.
+2. Amazon code commit repository stores the website code and all changes made in the repository automatically builds the AWS amplify app. [index.html](index.html) file contains the application code.
 3. The answers provided by clients are passed from AWS amplify via POST request to an API endpoint hosted on Amazon API gateway.
 4. The POST request with answers payload is passed to AWS Lambda handlers for further processing.
 5. AWS Lambda handler calls Amazon DynamoDB table to get the recommendations corresponding to chosen answer of a question and stores it in a variable. [lambda-handler.py](lambda-handler.py) file contains the lambda code and [Items](Items) folder contains the sample items of dynamoDB in JSON format. 
@@ -45,8 +45,8 @@ Note: Please make sure that the lambda function has required permissions to acce
 ![survey-webpage](https://github.com/A-yush/report-creation-using-questioanaire/blob/master/images/survey-webpage.gif)
 
 ## References
-* [+]https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
-* [+]https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html
+* https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
+* https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html
 
 ## Contact
 Created by [@A-yush] - feel free to contact me!
